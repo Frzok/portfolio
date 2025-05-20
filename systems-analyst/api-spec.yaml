@@ -1,0 +1,103 @@
+openapi: 3.0.0
+info:
+  title: Amazon Product API
+  version: 1.0.0
+  description: |
+    REST API для витрины товаров, карточек товара и корзины (на примере Amazon)
+
+paths:
+  /api/products:
+    get:
+      summary: Получить список товаров
+      responses:
+        '200':
+          description: Список товаров
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      example: B00X4WHP5E
+                    name:
+                      type: string
+                      example: Echo Dot (5th Gen)
+                    price:
+                      type: number
+                      format: float
+                      example: 59.99
+                    short_description:
+                      type: string
+                      example: Умная колонка с Alexa
+
+  /api/products/{id}:
+    get:
+      summary: Получить информацию о товаре
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Уникальный идентификатор товара
+      responses:
+        '200':
+          description: Детальная информация о товаре
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: B00X4WHP5E
+                  name:
+                    type: string
+                    example: Echo Dot (5th Gen)
+                  description:
+                    type: string
+                    example: Голосовое управление, умный дом и музыка
+                  price:
+                    type: number
+                    format: float
+                    example: 59.99
+                  images:
+                    type: array
+                    items:
+                      type: string
+                    example: ["img1.jpg", "img2.jpg"]
+
+  /api/cart:
+    post:
+      summary: Добавить товар в корзину
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                product_id:
+                  type: string
+                  example: B00X4WHP5E
+                quantity:
+                  type: integer
+                  example: 1
+      responses:
+        '200':
+          description: Товар добавлен в корзину
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Product added to cart
+                  cart_total:
+                    type: number
+                    format: float
+                    example: 59.99
