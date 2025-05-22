@@ -1,36 +1,36 @@
-# 💼 Тестовые задания и портфолио
+# 💼 Test Assignments & Portfolio
 
-Добро пожаловать в мой репозиторий, где собраны тестовые задания, кейсы и аналитические решения.  
-Цель — показать мои подходы к анализу, проработке требований, построению API, визуализации данных и системному мышлению.
+Welcome to my repository, where I’ve collected test assignments, case studies, and analytical solutions.  
+The goal is to showcase my approach to analysis, requirement handling, API design, data visualization, and systems thinking.
 
-## 📂 Структура
+## 📂 Structure
 
-| Папка | Содержание |
-|-------|------------|
-| `systems-analyst/` | Тестовое задание по системному анализу: базы данных, ER-диаграмма, REST API и бизнес-процессы |
-| `api/` | Примеры спецификаций REST API (OpenAPI/Swagger) |
-| `databases/` | SQL-скрипты, схемы БД, нормализация |
-| `diagrams/` | Общие визуальные элементы и схемы |
-| `templates/` | Шаблоны для оформления решений, markdown-файлов, ER-диаграмм и API-описаний |
+| Folder             | Contents                                                                 |
+|--------------------|--------------------------------------------------------------------------|
+| `systems-analyst/` | Test assignment in systems analysis: databases, ER diagram, REST API, and business processes |
+| `api/`             | Examples of REST API specifications (OpenAPI/Swagger)                    |
+| `databases/`       | SQL scripts, DB schemas, normalization                                   |
+| `diagrams/`        | General visual elements and diagrams                                     |
+| `templates/`       | Templates for documenting solutions, markdown files, ER diagrams, and API specs |
 
-## 🔧 Используемые технологии
+## 🔧 Technologies Used
 
-- 📄 Markdown для всей документации
-- 🗃️ OpenAPI (Swagger) для описания API
-- 🧠 Mermaid для визуализаций
-- 🧰 PyCharm — рабочее окружение
+- 📄 Markdown for all documentation  
+- 🗃️ OpenAPI (Swagger) for API specifications  
+- 🧠 Mermaid for visualizations  
+- 🧰 PyCharm — development environment
 
-## 🔜 Планируемое расширение
+## 🔜 Planned Additions
 
-- Добавление заданий по аналитике, BI и Python
-- Задания с собеседований: логика, SQL, интеграции
-- Интерфейсные мокапы и flowcharts (Mermaid)
+- More tasks focused on analytics, BI, and Python  
+- Interview tasks: logic, SQL, integrations  
+- Interface mockups and flowcharts (Mermaid)
 
 ---
 
-## 📬 Обо мне
+## 📬 About Me
 
-Меня зовут Людмила, я начинающий дата-аналитик с опытом работы в IT и госуправлении.  
-Здесь вы можете увидеть, **как я думаю, проектирую и оформляю**.
+My name is Liudmyla, and I’m a junior data analyst with a background in IT and public administration.  
+Here you can explore **how I think, design, and present solutions**.
 
-> Если вы рекрутер или потенциальный наниматель — спасибо, что заглянули! 😊
+> If you are a recruiter or potential employer — thank you for stopping by! 😊

@@ -1,8 +1,8 @@
-# 📝 Решение тестового задания
+# 📝 Test Assignment Solution
 
-## 1. Базы данных — тест
+## 1. Databases — Quiz
 
-**Ответы на тестовые вопросы:**
+**Answers to the test questions:**
 
 1. `1, 3`  
 2. `4`  
@@ -17,12 +17,13 @@
 
 ---
 
-## 2. Базы данных — ER-диаграмма (словесно)
+## 2. Databases — ER Diagram (Verbal Description)
 
-Есть заказы (`orders`), в которых указано название, цена, город и ID покупателя.  
-Один заказ может содержать несколько товаров, и один товар может встречаться в разных заказах — это связь многие-ко-многим. Для этого создаём таблицу-связку `Order_Items`.
+There are orders (`orders`) which include name, price, town, and customer ID.  
+A single order can contain multiple items, and one item can appear in multiple orders — a many-to-many relationship.  
+To model this, we create a junction table `Order_Items`.
 
-**Структура таблиц:**
+**Table structure:**
 
 - **Orders:**  
   `id (PK), name, town, price, customer_id (FK)`
@@ -32,59 +33,61 @@
   `id (PK), full_name, email, phone`
 - **Towns:**  
   `id (PK), name`
-- **Order_Items (связующая):**  
+- **Order_Items (junction table):**  
   `order_id (FK), item_id (FK), quantity`
 
 ---
 
-## 3. Интеграции (Amazon)
+## 3. Integrations (Amazon)
 
-### 🔹 Сценарий:
+### 🔹 Scenario:
 
-1. Покупатель открывает витрину Amazon и видит список товаров  
-2. Кликает на товар — попадает на страницу с описанием  
-3. Нажимает "добавить в корзину"
+1. A user opens the Amazon storefront and sees a list of products  
+2. Clicks on a product to open the product details page  
+3. Clicks "Add to Cart"
 
 ---
 
 ### 📦 REST API
 
-#### ✅ Получение списка товаров
+#### ✅ Get Product List
 
 `GET /api/products`
 
-**Ответ:**
+**Response:**
 ```json
 [
   {
     "id": "B00X4WHP5E",
     "name": "Echo Dot (5th Gen)",
     "price": 59.99,
-    "short_description": "Умная колонка с Alexa"
+    "short_description": "Smart speaker with Alexa"
   }
 ]
-```
+````
 
-#### ✅ Получение информации о товаре
+#### ✅ Get Product Details
 
 `GET /api/products/B00X4WHP5E`
 
-**Ответ:**
+**Response:**
+
 ```json
 {
   "id": "B00X4WHP5E",
   "name": "Echo Dot (5th Gen)",
-  "description": "Голосовое управление, умный дом и музыка",
+  "description": "Voice control, smart home integration, and music",
   "price": 59.99,
   "images": ["img1.jpg", "img2.jpg"]
 }
 ```
 
-#### ✅ Добавление в корзину
+#### ✅ Add to Cart
 
 `POST /api/cart`
 
-**Тело запроса:**
+**Request body:**
+
 ```json
 {
   "product_id": "B00X4WHP5E",
@@ -92,7 +95,8 @@
 }
 ```
 
-**Ответ:**
+**Response:**
+
 ```json
 {
   "message": "Product added to cart",
@@ -102,28 +106,30 @@
 
 ---
 
-### 🔄 Sequence диаграмма
+### 🔄 Sequence Diagram
 
-**Участники:**  
+**Participants:**
 `User → Amazon Frontend → API → Database`
 
-**Порядок действий:**
+**Flow:**
 
-1. `GET /api/products` — загрузка витрины  
-2. `GET /api/products/{id}` — подробности товара  
-3. `POST /api/cart` — добавление в корзину
+1. `GET /api/products` — load storefront
+2. `GET /api/products/{id}` — view product details
+3. `POST /api/cart` — add item to cart
 
 ---
 
-## 4. Алгоритмическое мышление (Sparkasse)
+## 4. Algorithmic Thinking (Sparkasse)
 
-### 📲 Сценарий: пополнить счёт на 100 € через мобильное приложение Sparkasse
+### 📲 Scenario: Top up €100 via the Sparkasse mobile app
 
-1. Включаю телефон  
-2. Открываю Sparkasse App  
-3. Прохожу авторизацию (Face ID)  
-4. Захожу в раздел "Handy aufladen"  
-5. Ввожу номер мобильного  
-6. Выбираю сумму: **100 €**  
-7. Подтверждаю платёж (pushTAN)  
-8. Получаю уведомление об успехе
+1. Turn on the phone
+2. Open the Sparkasse app
+3. Authenticate (Face ID)
+4. Go to the "Handy aufladen" (Top-Up) section
+5. Enter mobile phone number
+6. Select the amount: **€100**
+7. Confirm the payment (pushTAN)
+8. Receive a success notification
+
+

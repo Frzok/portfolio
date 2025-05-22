@@ -1,28 +1,28 @@
-# 📊 Системный анализ — тестовое задание
+# 📊 Systems Analysis — Test Assignment
 
-Этот раздел содержит полное решение кейса по системному анализу. Включены тесты, ER-диаграммы, REST API (на примере Amazon), sequence и процессные диаграммы.
+This section contains a complete solution to a systems analysis case. It includes test questions, ER diagrams, a REST API example (based on Amazon), as well as sequence and process diagrams.
 
-## 📁 Структура
+## 📁 Structure
 
-- `task.md` — условия задания
-- `solution.md` — краткий текстовый ответ
-- `api-spec.yaml` — OpenAPI спецификация
-- `diagrams/` — визуальные схемы и диаграммы
+- `task.md` — assignment description  
+- `solution.md` — concise text-based solution  
+- `api-spec.yaml` — OpenAPI specification  
+- `diagrams/` — visual diagrams and illustrations  
 
-## 📌 Визуализации
+## 📌 Visualizations
 
-### 📦 ER-диаграмма заказов
+### 📦 Order ER Diagram
 
-![ER-диаграмма](./diagrams/er-orders.png)
-
----
-
-### 🔄 Sequence диаграмма (Amazon)
-
-![Sequence диаграмма](./diagrams/sequence-amazon.png)
+![ER Diagram](./diagrams/er-orders.png)
 
 ---
 
-### 🏦 Процесс пополнения (Sparkasse)
+### 🔄 Sequence Diagram (Amazon)
 
-![Процессная диаграмма](./diagrams/process-sparkasse.png)
+![Sequence Diagram](./diagrams/sequence-amazon.png)
+
+---
+
+### 🏦 Process Diagram (Sparkasse)
+
+![Process Diagram](./diagrams/process-sparkasse.png)

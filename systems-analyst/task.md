@@ -1,122 +1,138 @@
-# Задание
+# 📄 Assignment
 
-Требование к оформлению результата:
-все результаты должны быть оформлены в едином файле без указания внутри него ссылок на другие ресурсы. После выполнения задания скиньте контактному лицу ссылку на этот файл.
-Исключение - если решите описывать REST API в сваггере, то это можно оформить и скинуть отдельным файлом.
+**Formatting requirement:**  
+All results must be compiled into a single file, without references or links to other resources.  
+The only exception: if you choose to describe the REST API using Swagger, it may be submitted as a separate file.
 
-## 1. Базы данных - тест
+---
 
-Для приведенных ниже вопросов выберите верные утверждения. Верным может быть одно или несколько утверждений.
+## 1. Databases – Quiz
 
-**1**
-Содержит ли какую-то информацию таблица, в которой нет полей?
+For each of the following questions, select the correct statements. One or more statements may be correct.
 
-1. Содержит информацию о структуре БД
-2. Не содержит никакой информации
-3. Таблица без полей существовать не может
-4. Содержит информацию о будущих записях
+**1** Does a table without any fields contain any information?
 
-**2**
-В записи файла реляционной БД может содержаться:
+1. Contains information about the structure of the database  
+2. Does not contain any information  
+3. A table without fields cannot exist  
+4. Contains information about future records  
 
-1. Исключительно однородная информация (данные только одного типа)
-2. Только текстовая информация
-3. Только логические величины
-4. Неоднородная информация (данные разных типов)
-5. Исключительно числовая информация
+**2** A record in a relational database file can contain:
 
-**3**
-Чем первичный ключ отличается от внешнего ключа?
+1. Only homogeneous data (same type)  
+2. Only text data  
+3. Only boolean values  
+4. Heterogeneous data (different types)  
+5. Only numerical data  
 
-1. Первичный ключ всегда состоит из множества столбцов, а внешний ключ состоит из одного столбца
-2. Значения первичного ключа всегда должны быть уникальными и не могут быть null, значения внешнего ключа могут повторяться
-3. Внешний ключ является идентификатором строки, а первичный ключ используется для связи между таблиц
-4. Первичный ключ является идентификатором для строки, а внешний ключ используется для связывания таблиц
+**3** What is the difference between a primary key and a foreign key?
 
-**4**
-В какой нормальной форме говорится о том, что все атрибуты зависят от первичного ключа, а не от его части?
+1. A primary key always consists of multiple columns, a foreign key only one  
+2. Primary key values must be unique and non-null; foreign key values may repeat  
+3. A foreign key identifies a row, and a primary key links tables  
+4. A primary key identifies a row; a foreign key is used to link tables  
 
-1. 1НФ
-2. 2НФ
-3. 3НФ
-4. 4НФ
+**4** Which normal form requires that all attributes depend on the whole primary key and not just a part of it?
 
-**5**
-В каком порядке в СУБД выполняются операторы SELECT, FROM, GROUP BY?
+1. 1NF  
+2. 2NF  
+3. 3NF  
+4. 4NF  
 
-1. Сначала SELECT, потом FROM и только потом GROUP BY
-2. Сначала GROUP BY, потом SELECT и только потом FROM
-3. Сначала FROM, потом SELECT и только потом GROUP BY
-4. Сначала FROM, потом GROUP BY и только потом SELECT
+**5** What is the execution order of SELECT, FROM, and GROUP BY in SQL?
 
-**6**
-Чем отличается оператор WHERE от HAVING
+1. SELECT → FROM → GROUP BY  
+2. GROUP BY → SELECT → FROM  
+3. FROM → SELECT → GROUP BY  
+4. FROM → GROUP BY → SELECT  
 
-1. Оператор WHERE применяется для фильтрации групп, а HAVING - для фильтрации отдельных строк
-2. Оператор HAVING применяется для фильтрации групп, а WHERE - для фильтрации отдельных строк
-3. HAVING работает только с агрегатными функциями, а WHERE может работать с любыми типами выражений
-4. WHERE может использоваться для фильтрации по любому полю или выражению, а HAVING - только для фильтрации по выражению в списке выбора или агрегатной функции
-5. HAVING всегда используется после GROUP BY, а WHERE может использоваться до или после GROUP BY
+**6** What is the difference between WHERE and HAVING?
 
-**7**
-Какой результат покажет выполнение операторов SELECT COUNT (\*)?
+1. WHERE filters groups; HAVING filters individual rows  
+2. HAVING filters groups; WHERE filters individual rows  
+3. HAVING works only with aggregate functions; WHERE works with any expressions  
+4. WHERE can filter by any column or expression; HAVING filters by values in SELECT or aggregates  
+5. HAVING is always used after GROUP BY; WHERE can be used before or after GROUP BY  
 
-1. Число строк таблицы, указанной во FROM, не включая значение NULL
-2. Число строк таблицы, указанной во FROM, где ячейка содержит символ
-3. Число строк таблицы, указанной во FROM, включая значение NULL
-4. Сумма строк таблицы, указанной во FROM, где ячейка содержит символ
+**7** What does `SELECT COUNT(*)` return?
 
-**8**
-В таблице «Animals» базы данных зоопарка содержится информация обо всех обитающих там животных, в том числе о лисах: red fox, grey fox, little fox. Напишите запрос, возвращающий информацию о возрасте лис
+1. The number of rows in the table, excluding NULL values  
+2. The number of rows where cells contain symbols  
+3. The number of all rows in the table, including NULLs  
+4. The sum of rows where cells contain symbols  
 
-1. SELECT age FROM Animals WHERE Animal LIKE “%fox”
-2. SELECT age FROM %Fox.Animals
-3. SELECT age FROM Animals WHERE Animal = fox
-4. SELECT %fox age FROM Animals
+**8** The “Animals” table in a zoo database contains animals like: red fox, grey fox, little fox.  
+Write a query that returns the age of the foxes.
 
-**9**
-Чем отличается DELETE от TRUNCATE?
+1. `SELECT age FROM Animals WHERE Animal LIKE "%fox"`  
+2. `SELECT age FROM %Fox.Animals`  
+3. `SELECT age FROM Animals WHERE Animal = fox`  
+4. `SELECT %fox age FROM Animals`  
 
-1. DELETE и TRUNCATE - это одно и то же
-2. DELETE используется для удаления одной или нескольких строк из таблицы, а TRUNCATE используется для удаления всех строк из таблицы
-3. DELETE может использовать условие WHERE, а TRUNCATE всегда удаляет все записи из таблицы
-4. DELETE удаляет данные из таблицы, а TRUNCATE удаляет саму таблицу
+**9** What is the difference between DELETE and TRUNCATE?
 
-**10**
-Дана таблица:
+1. DELETE and TRUNCATE are the same  
+2. DELETE removes one or more specific rows, TRUNCATE removes all rows  
+3. DELETE can use a WHERE clause; TRUNCATE always deletes all records  
+4. DELETE removes data; TRUNCATE deletes the table itself  
+
+**10** Given the table:
 
 ```
-COLOR 
+COLOR
+------
 BLUE
 RED
 null
 RED
 ```
 
-Каким будет результат запроса?
-SELECT COUNT (DISTINCT color) FROM Table
+What is the result of the query:  
+`SELECT COUNT(DISTINCT color) FROM Table`
 
-1. BLUE,RED,NULL
-2. 3
-3. 1,2,4
-4. 2
+1. BLUE, RED, NULL  
+2. 3  
+3. 1, 2, 4  
+4. 2  
 
-## 2. Базы данных - ER
+---
 
-В базе данных есть таблица заказов - orders. В ней есть поля: id (идентификатор заказа), name (название заказа), town (адрес доставки заказа), price (цена заказа), customer\_id (идентификатор покупателя). Также есть таблицы: towns (справочник адресов), items (товары), customers (покупатели). Известно, что между orders и items предполагается связь многие-ко-многим.
-Что нужно сделать:
-Спроектируйте ER-диаграмму с учетом этих вводных. Состав полей таблиц укажите на свое усмотрение с учетом условия, но для таблицы orders учтите те поля, что указаны.
+## 2. Databases – ER Diagram
 
-## 3. Интеграции
+The database contains an `orders` table with the following fields:  
+`id` (order ID), `name` (order name), `town` (delivery address), `price`, `customer_id`.  
+There are also `towns`, `items`, and `customers` tables.  
+There is a many-to-many relationship between `orders` and `items`.
 
-Представим, что Вы работаете аналитиком и проектируете работу приложения интернет-магазина. Вам нужно заложить и спроектировать следующий сценарий: отображение витрины товаров (список товаров с кратким описанием), переход с витрины на экран с детальным описанием конкретного товара, добавление товара в корзину.
-Что нужно сделать:
-Спроектируйте REST API, которые нужны для реализации описанного сценария. Решение должно включать описание запросов и описание или пример ответа для каждого из запросов в формате JSON. Способ описания - на ваше усмотрение. По составу полей товара можете ориентироваться на любой известный интернет-магазин.
-Постройте Sequence UML диаграмму для этого сценария.
+**Task:**  
+Design an ER diagram based on this input.  
+You may define the remaining fields as you see fit, but include the given fields for the `orders` table.
 
-## 4. Алгоритмическое мышление
+---
 
-Возьмем в качестве примера банковское мобильное приложение.
-Исходные условия: у вас в руке смартфон, на котором установлено банковское приложение (телефон выключен).
-Что нужно сделать:
-Используя любую нотацию, опишите в виде диаграммы процесс, в рамках которого Вы, используя банковское приложение, пополните баланс своего телефона на 100Р. В качестве примера можете использовать любое мобильное банковское приложение, что у Вас есть.
+## 3. Integrations
+
+Imagine you are working as an analyst designing a shopping app.  
+You need to model the following user journey:
+
+- Display a product catalog (list of items with short descriptions)  
+- Navigate from the catalog to a product detail page  
+- Add a product to the shopping cart  
+
+**Task:**  
+Design the REST APIs needed for this scenario.  
+Include the request and a sample JSON response for each endpoint.  
+You may use any online store as a reference for the data model.
+
+Additionally, build a **Sequence UML diagram** to illustrate this scenario.
+
+---
+
+## 4. Algorithmic Thinking
+
+Let’s take a mobile banking app as an example.  
+**Initial condition:** You have a smartphone with the app installed, but it is turned off.
+
+**Task:**  
+Using any notation, draw a diagram describing the full process of topping up your mobile phone balance with **€100** using the app.  
+You can use any banking app you’re familiar with as a reference.
